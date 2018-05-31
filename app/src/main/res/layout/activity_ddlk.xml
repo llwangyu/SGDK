@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/background_login">
+
+    <LinearLayout
+        android:id="@+id/llay11"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:orientation="vertical">
+
+        <com.amap.api.maps2d.MapView
+            android:id="@+id/mwjmap11"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        </com.amap.api.maps2d.MapView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llay22"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_marginBottom="40dp">
+
+
+            <com.mwj.lhn.sgdk.dzqm.SignView
+                android:id="@+id/signView00"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></com.mwj.lhn.sgdk.dzqm.SignView>
+        </FrameLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/my_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/blue_button"
+            android:text="返回"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/my_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/blue_button"
+            android:text="擦除"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/my_commit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/blue_button"
+            android:text="到岗签认"
+            android:textSize="12sp" />
+        <Button
+            android:id="@+id/my_nophcommit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/blue_button"
+            android:text="离线保存"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/qdinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="请确认签名及位置后在定位签认！"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp" />
+    <TextView
+        android:id="@+id/dqwz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

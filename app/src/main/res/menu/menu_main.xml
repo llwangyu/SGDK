@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.mwj.lhn.sgdk.mwj.SgxxActivity">
+    <item
+        android:id="@+id/action_notifications"
+        android:checkable="false"
+        android:icon="@mipmap/ic_launcher_round"
+        android:title="notifications"
+        app:showAsAction="ifRoom" />
+
+
+</menu>

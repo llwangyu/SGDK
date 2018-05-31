@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mwj.lhn.sgdk">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <!-- 请求网络 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 不是SDK需要的权限，是示例中的后台唤醒定位需要的权限 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 需要运行时注册的权限 -->
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于提高GPS定位速度 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入缓存定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 读取缓存数据 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+   <!-- 3.2.0版本增加 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- 3.2.0版本增加 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.mwj.lhn.sgdk.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="9116f7db63585b3494feda8c20582065" />
+        <!-- 定位需要的服务 -->
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".LocatActivity"
+            android:label="@string/title_activity_locat"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".dzqm.DzqmActivity"
+            android:label="@string/title_activity_locat"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".mwj.login"
+            android:label="@string/title_activity_locat"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".mwj.MenuActivity"
+            android:label="施工信息"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mwj.SgxxActivity"
+            android:label="施工信息"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".mwj.FormActivity"
+            android:label="登销记" />
+        <activity
+            android:name=".dzqm.photeActivity"
+            android:theme="@style/MyCustomTheme" />
+        <activity
+            android:name=".mwj.PhotoListActivity"
+            android:theme="@style/MyCustomTheme" />
+        <activity
+            android:name=".mwj.ShowImgActivity"
+            android:theme="@style/MyCustomTheme" />
+        <activity
+            android:name=".mwj.YbhActivity"
+            android:theme="@style/MyCustomTheme" />
+        <activity
+            android:name=".mwj.DDLKActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".mwj.FxwtActivity"
+            android:theme="@style/MyCustomTheme" />
+        <activity
+            android:name=".mwj.WtlrActivity"
+            android:label="问题录入" />
+        <activity
+            android:name=".mwj.WtlbActivity"
+            android:theme="@style/MyCustomTheme" />
+        <activity android:name=".Tab" />
+        <activity android:name=".mwj.DDSCActivity" />
+        <activity
+            android:name=".spps.PspActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".spps.PlayVideoActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".mwj.WebviewActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:alwaysRetainTaskState="true">
+            <intent-filter>
+                <action android:name="com.tencent.smtt.tbs.video.PLAY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.android.fisher.sgface.activity.MainActivity" />
+        <activity android:name="com.android.fisher.sgface.activity.WelcomeActivity">
+
+        </activity>
+        <activity android:name="com.android.fisher.sgface.activity.SignActivity" />
+        <activity android:name="com.android.fisher.sgface.activity.LoginActivity" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:background="#ffffffff"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+ <LinearLayout
+     android:id="@+id/linearlayout1"
+     android:orientation="horizontal"
+     android:layout_width="fill_parent"  
+     android:layout_height="wrap_content"
+     android:background="@drawable/nav_bg">
+     
+<ImageView
+     android:id="@+id/image_index"
+     android:layout_marginTop="5dp"
+     android:src="@drawable/first_index"
+     android:layout_width="wrap_content"  
+     android:layout_height="wrap_content"
+     ></ImageView>
+<TextView
+     style="@style/text_margin"
+     android:id="@+id/tv_first"
+     android:text="首页 "
+     android:background="@drawable/textview_bg"
+ ></TextView>
+<TextView
+     style="@style/text_margin"
+     android:textColor="#ffffff"
+     android:id="@+id/tv_flag"
+     android:text=">"
+   ></TextView>
+<ImageView
+     android:id="@+id/image_manager"
+     android:layout_marginTop="5dp"
+     android:src="@drawable/nav_knowledge"
+     android:layout_width="wrap_content"  
+     android:layout_height="wrap_content"
+     ></ImageView>
+<TextView
+     android:gravity="center"
+     android:id="@+id/tv_notice"
+     android:text="目录菜单 "
+     android:background="@drawable/textview_bg"
+     style="@style/text_margin"
+  ></TextView>
+</LinearLayout>
+<LinearLayout
+    android:id="@+id/linearlayout"
+     android:layout_height="wrap_content"
+    android:layout_width="fill_parent"  
+    android:orientation="vertical" 
+     android:background="@drawable/background_login">
+
+    <TextView
+        android:id="@+id/syr"
+        style="@style/normalText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="10px"
+        android:layout_y="12px"
+       
+        android:textSize="20sp" />
+
+ </LinearLayout>
+
+<LinearLayout
+    android:id="@+id/linearlayoute"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right"
+    android:gravity="right"
+    android:orientation="vertical" >
+</LinearLayout>
+       <GridView android:paddingTop="20dip"  android:background="@drawable/background_login" android:gravity="center" android:id="@+id/my_grid" android:layout_width="fill_parent" android:layout_height="0.0px" android:layout_marginTop="0.0dip" android:horizontalSpacing="10.0dip" android:verticalSpacing="20.0dip" android:stretchMode="columnWidth" android:columnWidth="60.0dip" android:numColumns="2" android:layout_weight="1.0" style="@style/CustomGridView" />
+    
+</LinearLayout> 

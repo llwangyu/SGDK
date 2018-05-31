@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_login"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/sgxx"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="81dp"
+            android:layout_height="38dp"
+            android:text="当前位置："
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/dqwz"
+            android:layout_width="242dp"
+            android:layout_height="38dp"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/dwbt"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@android:drawable/ic_dialog_map" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/sggs"
+        android:layout_width="match_parent"
+        android:layout_height="59dp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnTakePhoto"
+            android:layout_width="180dp"
+            android:background="@drawable/blue_button"
+            android:layout_height="wrap_content"
+            android:text="拍照" />
+
+        <Button
+            android:id="@+id/btnSelectPhoto"
+            android:layout_width="match_parent"
+            android:background="@drawable/blue_button"
+
+            android:layout_height="wrap_content"
+            android:text="从图库中选取" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnuploadPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/blue_button"
+
+            android:text="上传" />
+
+        <Button
+            android:id="@+id/nophoteqr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/blue_button"
+            android:text="离线存储"
+            android:textColor="@color/colorAccent" />
+
+        <Button
+            android:id="@+id/wzlqr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/blue_button"
+            android:text="无资料确认"
+            android:textColor="@color/colorAccent" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/ivPic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/background_login">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/blue_button"
+            android:text="前一天"
+            android:textSize="12sp"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/buttont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/blue_button"
+            android:text="今天"
+            android:textSize="12sp"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/buttonh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/blue_button"
+            android:text="后一天"
+            android:textSize="12sp"
+            android:visibility="invisible" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/sqxx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/blue_button"
+            android:text="上传列表"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/fxwz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/blue_button"
+            android:text="发现问题"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bczl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/blue_button"
+            android:text="补充资料"
+            android:textSize="12sp" />
+        <Button
+            android:id="@+id/ddsc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/blue_button"
+            android:text="等待上传"
+            android:textSize="12sp" />
+        <Button
+            android:id="@+id/spps"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/blue_button"
+            android:text="视频拍摄"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="63dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dqzt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="盯控关键环节："
+            android:textSize="@dimen/table_text_size" />
+
+        <TextView
+            android:id="@+id/sgzt"
+            android:layout_width="152dp"
+            android:layout_height="48dp"
+            android:textColor="@color/colorAccent"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/btbl"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@mipmap/icn1" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.当前登录信息："
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="@dimen/table_text_size" />
+
+    <TextView
+        android:id="@+id/dlxx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_26"
+        android:text="" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dgsj"
+            android:layout_width="176dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_26"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/lksj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_26"
+            android:text="" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2.施工信息："
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="@dimen/table_text_size" />
+    <TextView
+        android:id="@+id/sgdw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="施工单位："
+        android:textSize="@dimen/font_26"/>
+
+    <TextView
+        android:id="@+id/sgdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="施工地点："
+        android:textSize="@dimen/font_26"/>
+
+    <TextView
+        android:id="@+id/sglc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="施工里程："
+        android:textSize="@dimen/font_26"/>
+
+    <TextView
+        android:id="@+id/sgnr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="施工内容："
+        android:textSize="@dimen/font_26"/>
+
+    <TextView
+        android:id="@+id/sgsj"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="施工时间："
+        android:textSize="@dimen/font_26"/>
+
+    <TextView
+        android:id="@+id/sgfzr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="施工负责人："
+        android:textSize="@dimen/font_26"/>
+
+    <TextView
+        android:id="@+id/fzrdh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="负责人电话："
+        android:textSize="@dimen/font_26"/>
+
+    <TextView
+        android:id="@+id/dgxx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3.安排人员信息："
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="@dimen/table_text_size" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="@dimen/font_26"
+        />
+
+    <TextView
+        android:id="@+id/tel"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="1dp"
+        android:text=""
+        android:textSize="@dimen/font_26"
+         />
+
+    <TextView
+        android:id="@+id/dw"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="1dp"
+        android:text=""
+        android:textSize="@dimen/font_26"
+         />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+
+    </LinearLayout>
+</LinearLayout>
