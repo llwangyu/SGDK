@@ -1,7 +1,6 @@
 package com.mwj.lhn.sgdk.mwj;
 
 
-
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -31,167 +30,166 @@ import com.mwj.lhn.sgdk.R;
 @TargetApi(Build.VERSION_CODES.ECLAIR)
 @SuppressLint("NewApi")
 public class MenuActivity extends Activity {
-	private GridView grid;
-	private DisplayMetrics localDisplayMetrics;
-	private View view;
-	private TextView mText1;
+    private GridView grid;
+    private DisplayMetrics localDisplayMetrics;
+    private View view;
+    private TextView mText1;
 
-	private String value = "";
+    private String value = "";
 
-	public void onCreate(Bundle bundle) {
-		super.onCreate(bundle);
-		view = this.getLayoutInflater().inflate(R.layout.menumain, null);
-		showData();
+    public void onCreate(Bundle bundle) {
+        super.onCreate(bundle);
+        view = this.getLayoutInflater().inflate(R.layout.menumain, null);
+        showData();
 
-	}
-
-
-
-	public void showData() {
-		setContentView(view);
-		localDisplayMetrics = getResources().getDisplayMetrics();
-		grid = (GridView) view.findViewById(R.id.my_grid);
-		ListAdapter adapter = new GridAdapter(this);
-		grid.setAdapter(adapter);
-		grid.setOnItemClickListener(mOnClickListener);
-		mText1 = (TextView) findViewById(R.id.syr);	
-		mText1.setText("欢迎使用"+value);
-	}
+    }
 
 
-	@SuppressLint("NewApi")
-	private AdapterView.OnItemClickListener mOnClickListener = new AdapterView.OnItemClickListener() {
-		@TargetApi(Build.VERSION_CODES.ECLAIR)
-		@SuppressLint("NewApi")
-		public void onItemClick(AdapterView<?> parent, View v, int position,
-				long id) {
-			
-			if (position == 0) {
-				Intent intent = new Intent();
-				Bundle bundle = new Bundle();
-				intent.setClass(MenuActivity.this, login.class);
-				startActivity(intent);
-			}
-			else if (position == 1) {
-				Intent intent = new Intent();
-				Bundle bundle = new Bundle();
-				intent.setClass(MenuActivity.this, com.android.fisher.sgface.activity.WelcomeActivity.class);
-				startActivity(intent);
-			}
-			else if (position == 2) {
-				Intent intent = new Intent();
-				Bundle bundle = new Bundle();
-				intent.setClass(MenuActivity.this, WebviewActivity.class);
-				startActivity(intent);
-			}
-
-			
-		}
-	};
-
-	public class GridAdapter extends BaseAdapter {
-		private LayoutInflater inflater;
-		public GridAdapter(Context context) {
-			inflater = LayoutInflater.from(context);
-		}
-		public final int getCount() {
-			return 9;
-		}
-		public final Object getItem(int paramInt) {
-			return null;
-		}
-		public final long getItemId(int paramInt) {
-			return paramInt;
-		}
-		public View getView(int paramInt, View paramView,
-				ViewGroup paramViewGroup) {
-			
-			paramView = inflater.inflate(R.layout.activity_label_item, null);
-			TextView text = (TextView) paramView
-					.findViewById(R.id.activity_name);
-			switch (paramInt) {
-			case 0: {
-
-					text.setText("现场控制子系统");
+    public void showData() {
+        setContentView(view);
+        localDisplayMetrics = getResources().getDisplayMetrics();
+        grid = (GridView) view.findViewById(R.id.my_grid);
+        ListAdapter adapter = new GridAdapter(this);
+        grid.setAdapter(adapter);
+        grid.setOnItemClickListener(mOnClickListener);
+        mText1 = (TextView) findViewById(R.id.syr);
+        mText1.setText("欢迎使用" + value);
+    }
 
 
-				Drawable draw = getResources().getDrawable(
-						R.drawable.wbgw1);
-				draw.setBounds(0, 0, draw.getIntrinsicWidth(),
-						draw.getIntrinsicHeight());
-				text.setCompoundDrawables(null, draw, null, null);
-				break;
-			}
+    @SuppressLint("NewApi")
+    private AdapterView.OnItemClickListener mOnClickListener = new AdapterView.OnItemClickListener() {
+        @TargetApi(Build.VERSION_CODES.ECLAIR)
+        @SuppressLint("NewApi")
+        public void onItemClick(AdapterView<?> parent, View v, int position,
+                                long id) {
 
-			case 1: {
+            if (position == 0) {
+                Intent intent = new Intent();
+                Bundle bundle = new Bundle();
+                intent.setClass(MenuActivity.this, login.class);
+                startActivity(intent);
+            } else if (position == 1) {
+                Intent intent = new Intent();
+                Bundle bundle = new Bundle();
+                intent.setClass(MenuActivity.this, com.android.fisher.sgface.activity.MainActivity.class);
+                startActivity(intent);
+            } else if (position == 2) {
+                Intent intent = new Intent();
+                Bundle bundle = new Bundle();
+                intent.setClass(MenuActivity.this, WebviewActivity.class);
+                startActivity(intent);
+            }
+        }
+    };
 
-					text.setText("到岗签名子系统");
+    public class GridAdapter extends BaseAdapter {
+        private LayoutInflater inflater;
 
-				Drawable draw = getResources().getDrawable(
-						R.drawable.nbzl1);
-				draw.setBounds(0, 0, draw.getIntrinsicWidth(),
-						draw.getIntrinsicHeight());
-				text.setCompoundDrawables(null, draw, null, null);
-				break;
-			}
+        public GridAdapter(Context context) {
+            inflater = LayoutInflater.from(context);
+        }
 
-			case 2: {
+        public final int getCount() {
+            return 9;
+        }
 
-					text.setText("施工现场视频");
+        public final Object getItem(int paramInt) {
+            return null;
+        }
 
-				Drawable draw = getResources().getDrawable(
-						R.drawable.dzyj1);
-				draw.setBounds(0, 0, draw.getIntrinsicWidth(),
-						draw.getIntrinsicHeight());
-				text.setCompoundDrawables(null, draw, null, null);
-				break;
-			}
+        public final long getItemId(int paramInt) {
+            return paramInt;
+        }
+
+        public View getView(int paramInt, View paramView,
+                            ViewGroup paramViewGroup) {
+
+            paramView = inflater.inflate(R.layout.activity_label_item, null);
+            TextView text = (TextView) paramView
+                    .findViewById(R.id.activity_name);
+            switch (paramInt) {
+                case 0: {
+
+                    text.setText("现场控制子系统");
 
 
-			}
+                    Drawable draw = getResources().getDrawable(
+                            R.drawable.wbgw1);
+                    draw.setBounds(0, 0, draw.getIntrinsicWidth(),
+                            draw.getIntrinsicHeight());
+                    text.setCompoundDrawables(null, draw, null, null);
+                    break;
+                }
 
-			paramView
-					.setMinimumHeight((int) (36.0F * localDisplayMetrics.density));
+                case 1: {
+
+                    text.setText("到岗签名子系统");
+
+                    Drawable draw = getResources().getDrawable(
+                            R.drawable.nbzl1);
+                    draw.setBounds(0, 0, draw.getIntrinsicWidth(),
+                            draw.getIntrinsicHeight());
+                    text.setCompoundDrawables(null, draw, null, null);
+                    break;
+                }
+
+                case 2: {
+
+                    text.setText("施工现场视频");
+
+                    Drawable draw = getResources().getDrawable(
+                            R.drawable.dzyj1);
+                    draw.setBounds(0, 0, draw.getIntrinsicWidth(),
+                            draw.getIntrinsicHeight());
+                    text.setCompoundDrawables(null, draw, null, null);
+                    break;
+                }
+
+
+            }
+
+            paramView .setMinimumHeight((int) (36.0F * localDisplayMetrics.density));
 //			 paramView.setMinimumHeight((int)(96.0F *
 //			 localDisplayMetrics.density));
-			paramView
-					.setMinimumWidth(((-12 + localDisplayMetrics.widthPixels) / 3));
+            paramView
+                    .setMinimumWidth(((-12 + localDisplayMetrics.widthPixels) / 3));
 
-			return paramView;
-		}
-	}
+            return paramView;
+        }
+    }
 
-	protected void dialog() {
-		Builder builder = new Builder(MenuActivity.this);
-		builder.setMessage("确定要退出?");
-		builder.setTitle("提示");
-		builder.setPositiveButton("确定",
-				new DialogInterface.OnClickListener() {
-					@Override
-					public void onClick(DialogInterface dialog, int which) {
-						dialog.dismiss();
-						MenuActivity.this.finish();
-					}
-				});
-		
-		builder.setNegativeButton("取消",
-				new DialogInterface.OnClickListener() {
-					@Override
-					public void onClick(DialogInterface dialog, int which) {
-						dialog.dismiss();
-					}
-				});
-		builder.create().show();
-	}
-	
+    protected void dialog() {
+        Builder builder = new Builder(MenuActivity.this);
+        builder.setMessage("确定要退出?");
+        builder.setTitle("提示");
+        builder.setPositiveButton("确定",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                        MenuActivity.this.finish();
+                    }
+                });
 
-	@Override
-	public boolean onKeyDown(int keyCode, KeyEvent event)  {
-	    if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) { 
-	    	dialog();
-	        return true;
-	    }
-	    return super.onKeyDown(keyCode, event);
-	}
+        builder.setNegativeButton("取消",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+        builder.create().show();
+    }
+
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
+            dialog();
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 
 }

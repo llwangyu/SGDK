@@ -14,19 +14,13 @@ import android.widget.TabHost.TabSpec;
 
 public class Tab extends TabActivity {
 
-
-
-
     private int myMenuRes[] = { R.drawable.tab1, R.drawable.tab2,
             R.drawable.tab3, R.drawable.tab4
-
     };
 
     TabHost tabHost;
     TabSpec firstTabSpec;
     TabSpec secondTabSpec;
-
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
