@@ -72,7 +72,7 @@ public class MenuActivity extends Activity {
             } else if (position == 1) {
                 Intent intent = new Intent();
                 Bundle bundle = new Bundle();
-                intent.setClass(MenuActivity.this, com.android.fisher.sgface.activity.MainActivity.class);
+                intent.setClass(MenuActivity.this, com.android.fisher.sgface.activity.WelcomeActivity.class);
                 startActivity(intent);
             } else if (position == 2) {
                 Intent intent = new Intent();
@@ -110,10 +110,7 @@ public class MenuActivity extends Activity {
                     .findViewById(R.id.activity_name);
             switch (paramInt) {
                 case 0: {
-
                     text.setText("现场控制子系统");
-
-
                     Drawable draw = getResources().getDrawable(
                             R.drawable.wbgw1);
                     draw.setBounds(0, 0, draw.getIntrinsicWidth(),
@@ -121,11 +118,8 @@ public class MenuActivity extends Activity {
                     text.setCompoundDrawables(null, draw, null, null);
                     break;
                 }
-
                 case 1: {
-
                     text.setText("到岗签名子系统");
-
                     Drawable draw = getResources().getDrawable(
                             R.drawable.nbzl1);
                     draw.setBounds(0, 0, draw.getIntrinsicWidth(),
@@ -133,11 +127,8 @@ public class MenuActivity extends Activity {
                     text.setCompoundDrawables(null, draw, null, null);
                     break;
                 }
-
                 case 2: {
-
                     text.setText("施工现场视频");
-
                     Drawable draw = getResources().getDrawable(
                             R.drawable.dzyj1);
                     draw.setBounds(0, 0, draw.getIntrinsicWidth(),
@@ -145,8 +136,6 @@ public class MenuActivity extends Activity {
                     text.setCompoundDrawables(null, draw, null, null);
                     break;
                 }
-
-
             }
 
             paramView .setMinimumHeight((int) (36.0F * localDisplayMetrics.density));

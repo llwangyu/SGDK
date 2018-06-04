@@ -76,5 +76,6 @@
     <string name="title_activity_wtlr">WtlrActivity</string>
     <string name="title_activity_wtlb">WtlbActivity</string>
     <string name="title_activity_tab">TabActivity</string>
+    <string name="title_activity_test_">Test_Activity</string>
 
 </resources>

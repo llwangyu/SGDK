@@ -25,7 +25,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <!-- 用于读取手机当前的状态 -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-   <!-- 3.2.0版本增加 -->
+    <!-- 3.2.0版本增加 -->
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <!-- 3.2.0版本增加 -->
     <uses-permission android:name="android.permission.BLUETOOTH" />
@@ -41,6 +41,7 @@
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.GET_TASKS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -77,7 +78,7 @@
         <activity
             android:name=".mwj.login"
             android:label="@string/title_activity_locat"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".mwj.MenuActivity"
             android:label="施工信息"
@@ -127,25 +128,26 @@
         <activity
             android:name=".spps.PlayVideoActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".mwj.WebviewActivity"
-            android:theme="@style/AppTheme.NoActionBar"
+        <activity
+            android:name=".mwj.WebviewActivity"
+            android:alwaysRetainTaskState="true"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:exported="false"
             android:launchMode="singleTask"
-            android:alwaysRetainTaskState="true">
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="com.tencent.smtt.tbs.video.PLAY" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
         <activity android:name="com.android.fisher.sgface.activity.MainActivity" />
-        <activity android:name="com.android.fisher.sgface.activity.WelcomeActivity">
-
-        </activity>
+        <activity android:name="com.android.fisher.sgface.activity.WelcomeActivity"></activity>
         <activity android:name="com.android.fisher.sgface.activity.SignActivity" />
         <activity android:name="com.android.fisher.sgface.activity.LoginActivity" />
-
+        <activity
+            android:name=".db.Test_Activity"
+            android:label="@string/title_activity_test_"></activity>
     </application>
 
 </manifest>
